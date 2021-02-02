@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_31_100305) do
+ActiveRecord::Schema.define(version: 2021_02_02_091740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "scores", force: :cascade do |t|
+    t.string "title", null: false, comment: "曲名"
+    t.integer "grade", comment: "楽譜の等級"
+    t.date "start_date", comment: "開始日"
+    t.date "completion_date", comment: "完成日"
+    t.string "icon"
+    t.string "status"
+    t.text "point"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
