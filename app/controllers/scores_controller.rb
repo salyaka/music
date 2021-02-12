@@ -6,6 +6,7 @@ class ScoresController < ApplicationController
   end
 
   def show
+    @score = current_user.score.find(params[:id])
   end
 
   def new
