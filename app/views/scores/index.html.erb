@@ -1,2 +1,8 @@
-<h1>Scores#index</h1>
-<p>Find me in app/views/scores/index.html.erb</p>
+<h2>楽譜一覧ページ</h2>
+<%= link_to "楽譜を追加する", new_score_path %>
+<% @scores.each do |score| %>
+  <p><%= score.title %></p>
+  <%= link_to "詳細", score %>
+  <%= link_to "編集", edit_score_path(score) %>
+  <%= link_to "削除", score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } %>
+<% end %>

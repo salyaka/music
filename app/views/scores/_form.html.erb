@@ -1,0 +1,25 @@
+<%= form_with model: @score, local: true do |f| %>
+  <div>
+    <%= f.label :title, "曲名" %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :icon, "画像" %>
+    <%= f.file_field :icon %>
+  </div>
+  <div>
+    <%= f.label :grade, "グレード" %>
+    <%= f.text_field :grade %>
+  </div>
+  <div>
+    <%= f.label :start_date, "開始日" %>
+    <%= f.text_field :start_date, class: 'date', placeholder: "日付を選択" %>
+  </div>
+  <div>
+    <%= f.label :completion_date, "完成日" %>
+    <%= f.text_field :completion_date, class: 'date', placeholder: "日付を選択" %>
+  </div>
+  <div>
+    <%= f.submit "登録" %>
+  </div>
+<% end %>
