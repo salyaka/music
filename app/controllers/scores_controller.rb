@@ -36,6 +36,9 @@ class ScoresController < ApplicationController
   end
 
   def destroy
+    score = current_user.score.find(params[:id])
+    score.destroy!
+    redirect_to :scores
   end
 
   private
