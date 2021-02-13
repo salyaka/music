@@ -20,6 +20,10 @@
     <%= f.text_field :completion_date, class: 'date', placeholder: "日付を選択" %>
   </div>
   <div>
+    <%= f.label :status, "状況" %>
+    <%= f.select :status, Score.statuses.keys.map {|k| [I18n.t("enums.score.status.#{k}"), k]} %>
+  </div>
+  <div>
     <%= f.submit "登録" %>
   </div>
 <% end %>

@@ -205,3 +205,10 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  enums:
+    score:
+      status:
+        default: "--"
+        finished: 完成
+        practice: 練習中
+        playing: 弾きたい
