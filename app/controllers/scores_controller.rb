@@ -23,9 +23,16 @@ class ScoresController < ApplicationController
   end
 
   def edit
+    @score = current_user.score.find(params[:id])
   end
 
   def update
+    score = current_user.score.find(params[:id])
+    if score.update_attributes(score_params)
+      redirect_to :scores
+    else
+      render action: :edit
+    end
   end
 
   def destroy
