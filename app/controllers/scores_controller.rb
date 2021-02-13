@@ -1,12 +1,12 @@
 class ScoresController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_score, only: %w(show edit update destroy)
 
   def index
     @scores = current_user.score.all.order("created_at DESC")
   end
 
   def show
-    @score = current_user.score.find(params[:id])
   end
 
   def new
@@ -23,12 +23,10 @@ class ScoresController < ApplicationController
   end
 
   def edit
-    @score = current_user.score.find(params[:id])
   end
 
   def update
-    score = current_user.score.find(params[:id])
-    if score.update_attributes(score_params)
+    if @score.update_attributes(score_params)
       redirect_to :scores
     else
       render action: :edit
@@ -36,14 +34,17 @@ class ScoresController < ApplicationController
   end
 
   def destroy
-    score = current_user.score.find(params[:id])
-    score.destroy!
+    @score.destroy!
     redirect_to :scores
   end
 
   private
 
   def score_params
-    params.require(:score).permit(:title, :grade, :start_date, :completion_date, :icon, :status)
+    params.require(:score).permit(:title, :grade, :start_date, :completion_date, :icon, :status, :point)
+  end
+
+  def set_score
+    @score = current_user.score.find(params[:id])
   end
 end
