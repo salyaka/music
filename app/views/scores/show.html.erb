@@ -1,7 +1,5 @@
 <h1>詳細ページ</h1>
-<% if @score.icon? %>
-  <p><%= image_tag @score.icon.url %></p>
-<% end %>
+<p><%= image_tag @score.icon.url %></p>
 <p>曲名:<%= @score.title %></p>
 <p>グレード:<%= @score.grade %></p>
 <p>開始日:<%= @score.start_date %></p>
