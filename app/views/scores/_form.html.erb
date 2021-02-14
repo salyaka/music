@@ -5,7 +5,7 @@
   </div>
   <div>
     <%= f.label :icon, "画像" %>
-    <%= f.file_field :icon %>
+    <%= f.file_field :icon, accept: "image/png,image/jpeg,image/jpg" %>
   </div>
   <div>
     <%= f.label :grade, "グレード" %>
