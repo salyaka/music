@@ -18,6 +18,7 @@
 <div class="tab-content">
   <div id="all" class="tab-pane active">
     <% @scores.each do |score| %>
+      <p><%= image_tag score.icon.url %></p>
       <p><%= score.title %></p>
       <%= link_to "詳細", score %>
       <%= link_to "編集", edit_score_path(score), data: { turbolinks: false} %>
@@ -27,6 +28,7 @@
   <div id="finished" class="tab-pane">
     <% @scores = Score.where(status: 1) %>
     <% @scores.each do |score| %>
+      <p><%= image_tag score.icon.url %></p>
       <p><%= score.title %></p>
       <%= link_to "詳細", score %>
       <%= link_to "編集", edit_score_path(score), data: { turbolinks: false} %>
@@ -36,6 +38,7 @@
   <div id="practice" class="tab-pane">
     <% @scores = Score.where(status: 2) %>
     <% @scores.each do |score| %>
+      <p><%= image_tag score.icon.url %></p>
       <p><%= score.title %></p>
       <%= link_to "詳細", score %>
       <%= link_to "編集", edit_score_path(score), data: { turbolinks: false} %>
@@ -45,6 +48,7 @@
   <div id="playing" class="tab-pane">
     <% @scores = Score.where(status: 3) %>
     <% @scores.each do |score| %>
+      <p><%= image_tag score.icon.url %></p>
       <p><%= score.title %></p>
       <%= link_to "詳細", score %>
       <%= link_to "編集", edit_score_path(score), data: { turbolinks: false} %>
