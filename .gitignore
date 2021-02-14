@@ -37,3 +37,6 @@ yarn-debug.log*
 
 .DS_Store
 /vendor/bundle
+
+# icon画像をgit管理下から除外
+/public/uploads/
