@@ -4,3 +4,16 @@
 <p>グレード:<%= @score.grade %></p>
 <p>開始日:<%= @score.start_date %></p>
 <p>完了日:<%= @score.completion_date %></p>
+<h4>練習ログ</h4>
+<% @logs  = @score.feed_log(@score.id) %>
+<% @logs.each do |log| %>
+ <p><%= log.content %><%= log.start_time %></p>
+ <%= link_to "削除", log_path(log), method: :delete, data: { confirm: "ログを削除してもよろしいですか?" } %>
+<% end %>
+
+<%= form_with model: @log, local: true do |f| %>
+  <%= hidden_field_tag :score_id, @score.id %>
+  <%= f.text_area :content, placeholder: "練習記録" %>
+  <%= f.text_field :start_time, class: 'date', placeholder: "日付を選択" %>
+  <%= f.submit "ログ追加" %>
+<% end %>

@@ -10,4 +10,9 @@ class Score < ApplicationRecord
     practice: 2,
     playing: 3,
   }
+
+  def feed_log(score_id)
+    Log.where("score_id = ?", score_id)
+  end
+
 end
