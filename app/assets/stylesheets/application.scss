@@ -15,3 +15,18 @@
  */
 
  @import "bootstrap/scss/bootstrap";
+
+
+ /* 共通部分
+ --------------------------*/
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
