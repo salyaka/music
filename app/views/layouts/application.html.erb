@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Music</title>
+    <title>Score Log</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,19 +12,14 @@
 
   <body>
     <header>
-      <% if user_signed_in? %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
-        <%= link_to "楽譜棚", scores_path %>
-        <%= link_to "カレンダー", "#" %>
-      <% else %>
-        <%= link_to "ログイン", new_user_session_path %>
-        <%= link_to "新規登録", new_user_registration_path %>
-      <% end %>
+      <%= render "layouts/header" %>
     </header>
 
     <main>
-      <%= render "layouts/flash" %> 
-      <%= yield %>
+      <div class="container">
+        <%= render "layouts/flash" %> 
+        <%= yield %>
+      </div>
     </main>
 
     <footer>
