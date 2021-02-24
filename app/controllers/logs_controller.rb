@@ -17,6 +17,10 @@ class LogsController < ApplicationController
     redirect_to score_url(@score)
   end
 
+  def index
+    @logs = Log.all
+  end
+
   private
 
   def log_params
