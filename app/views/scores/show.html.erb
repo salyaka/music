@@ -4,6 +4,8 @@
 <p>グレード:<%= @score.grade %></p>
 <p>開始日:<%= @score.start_date %></p>
 <p>完了日:<%= @score.completion_date %></p>
+<%= link_to "編集", edit_score_path(@score), data: { turbolinks: false} %>
+<%= link_to "削除", @score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } %>
 <h4>練習ログ</h4>
 <% @logs  = @score.feed_log(@score.id) %>
 <% @logs.each do |log| %>

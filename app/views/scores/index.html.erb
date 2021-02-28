@@ -1,58 +1,76 @@
-<h2>楽譜一覧ページ</h2>
-<%= link_to "楽譜を追加する", new_score_path, data: { turbolinks: false} %>
-
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a href="#all" class="nav-link active" data-toggle="tab">すべて</a>
-  </li>
-  <li class="nav-item">
-    <a href="#finished" class="nav-link" data-toggle="tab"> 完成</a>
-  </li>
-  <li class="nav-item">
-    <a href="#practice" class="nav-link" data-toggle="tab">練習中</a>
-  </li>
-  <li class="nav-item">
-    <a href="#playing" class="nav-link" data-toggle="tab">弾きたい</a>
-  </li>
-</ul>
-<div class="tab-content">
-  <div id="all" class="tab-pane active">
-    <% @scores.each do |score| %>
-      <p><%= image_tag score.icon.url %></p>
-      <p><%= score.title %></p>
-      <%= link_to "詳細", score %>
-      <%= link_to "編集", edit_score_path(score), data: { turbolinks: false} %>
-      <%= link_to "削除", score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } %>
-    <% end %>
-  </div>
-  <div id="finished" class="tab-pane">
-    <% @scores = Score.where(status: 1) %>
-    <% @scores.each do |score| %>
-      <p><%= image_tag score.icon.url %></p>
-      <p><%= score.title %></p>
-      <%= link_to "詳細", score %>
-      <%= link_to "編集", edit_score_path(score), data: { turbolinks: false} %>
-      <%= link_to "削除", score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } %>
-    <% end %>
-  </div>
-  <div id="practice" class="tab-pane">
-    <% @scores = Score.where(status: 2) %>
-    <% @scores.each do |score| %>
-      <p><%= image_tag score.icon.url %></p>
-      <p><%= score.title %></p>
-      <%= link_to "詳細", score %>
-      <%= link_to "編集", edit_score_path(score), data: { turbolinks: false} %>
-      <%= link_to "削除", score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } %>
-    <% end %>
-  </div>
-  <div id="playing" class="tab-pane">
-    <% @scores = Score.where(status: 3) %>
-    <% @scores.each do |score| %>
-      <p><%= image_tag score.icon.url %></p>
-      <p><%= score.title %></p>
-      <%= link_to "詳細", score %>
-      <%= link_to "編集", edit_score_path(score), data: { turbolinks: false} %>
-      <%= link_to "削除", score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } %>
-    <% end %>
-  </div>
+<div class="count-box">
+  <dl>
+    <dd><%= @scores.count %></dd>
+    <dt>登録数</dt>
+  </dl>
+  <dl>
+    <dd><%= @scores = Score.where(status: 1).count %></dd>
+    <dt>完成</dt>
+  </dl>
+  <dl>
+    <dd><%= @scores = Score.where(status: 2).count %></dd>
+    <dt>練習中</dt>
+  </dl>
+  <dl>
+    <dd><%= @scores = Score.where(status: 3).count %></dd>
+    <dt>弾きたい</dt>
+  </dl>
 </div>
+<div class="button-area">
+  <%= link_to "楽譜を追加する", new_score_path, data: { turbolinks: false}, class: "button" %>
+</div>
+
+<div class="tabs">
+  <input id="all" type="radio" name="tab-item" checked>
+  <label class="tab-item" for="all">すべて</label>
+  <input id="finished" type="radio" name="tab-item">
+  <label class="tab-item" for="finished">完成</label>
+  <input id="practice" type="radio" name="tab-item">
+  <label class="tab-item" for="practice">練習中</label>
+  <input id="playing" type="radio" name="tab-item">
+  <label class="tab-item" for="playing">弾きたい</label>
+  
+  <div class="tab-content" id="all-content">
+    <div class="scores">
+      <% @scores = current_user.score.all.order("created_at DESC") %>
+      <% @scores.each do |score| %>
+        <%= link_to score, class: "score" do %>
+          <div class="image"><%= image_tag score.icon.url %></div>
+          <p><%= score.title %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="tab-content" id="finished-content">
+    <div class="scores">
+      <% @scores = Score.where(status: 1).order("created_at DESC") %>
+      <% @scores.each do |score| %>
+        <%= link_to score, class: "score" do %>
+          <div class="image"><%= image_tag score.icon.url %></div>
+          <p><%= score.title %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="tab-content" id="practice-content">
+    <div class="scores">
+      <% @scores = Score.where(status: 2).order("created_at DESC") %>
+      <% @scores.each do |score| %>
+        <%= link_to score, class: "score" do %>
+          <div class="image"><%= image_tag score.icon.url %></div>
+          <p><%= score.title %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="tab-content" id="playing-content">
+    <div class="scores">
+      <% @scores = Score.where(status: 3).order("created_at DESC") %>
+      <% @scores.each do |score| %>
+        <%= link_to score, class: "score" do %>
+          <div class="image"><%= image_tag score.icon.url %></div>
+          <p><%= score.title %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
