@@ -29,6 +29,8 @@ body {
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
   line-height: 1.7;
   padding-top: 60px;
+  background: #e8ebe5;
+  color: #565656;
 }
 img {
   max-width: 100%;
@@ -56,4 +58,114 @@ nav ul li {
 }
 button:focus {
   outline: none;
+}
+
+
+/* 楽譜棚ページ
+--------------------------*/
+.count-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 100px;
+  padding: 50px 70px;
+  border-width: 1px;
+  background: #F8F9FA;
+  border-top-left-radius:10px; 
+  border-top-right-radius:10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+dl {
+  display: block;
+  margin: 0px;
+  text-align: center;
+}
+dt {
+  font-weight: normal;
+}
+dd {
+  margin-bottom: 0;
+}
+
+/* ボタンデザイン */
+.button-area {
+  text-align: center;
+}
+.button {
+  display: inline-block;
+  padding: 0.3em 1em;
+  width: 400px;
+  text-decoration:none !important;
+  color: #7EACC4;
+  border: solid 2px #7EACC4;
+  border-radius: 8px;
+  transition: .4s;
+  &:hover {
+    background: #7EACC4;
+    color: white;
+  }
+}
+
+/* タブ */
+.tabs {
+  margin: 50px 0px;
+  background-color: #F8F9FA;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.tab-item {
+  width: calc(100%/4);
+  height: 50px;
+  background-color: #7EACC4;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  text-align: center;
+  transition: all 0.2s ease;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+input[name="tab-item"] {
+  display: none;
+}
+.tab-content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+#all:checked ~ #all-content,
+#finished:checked ~ #finished-content,
+#practice:checked ~ #practice-content,
+#playing:checked ~ #playing-content {
+  display: block;
+}
+.tabs input:checked + .tab-item {
+  background-color: #F8F9FA;
+  color: #565656;
+}
+.scores {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.score {
+  margin: 10px 20px;
+  padding: 10px;
+  text-decoration:none !important;
+  transition: .3s;
+	transform: scale(1);
+  &:hover {
+    transform: scale(1.07);
+  }
+  p {
+    color: #565656;
+  }
+}
+.image {
+  width: 170px;
+  height: 220px;
 }
