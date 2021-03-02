@@ -19,6 +19,7 @@
       </div>
       <div class="title">
         <p>ポイント</p>
+        <%= @score.point %>
       </div>
       <div class="edit">
         <%= link_to edit_score_path(@score), data: { turbolinks: false} do %>
