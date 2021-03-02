@@ -6,6 +6,10 @@
     <div class="show-score">
       <p class="score-title"><%= @score.title %></p>
       <div class="title">
+        <p>登録状況</p>
+        <%= @score.status_i18n %>
+      </div>
+      <div class="title">
         <p>グレード</p>
         <%= @score.grade %>
       </div>
