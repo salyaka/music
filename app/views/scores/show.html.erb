@@ -1,21 +1,67 @@
-<h1>詳細ページ</h1>
-<p><%= image_tag @score.icon.thumb.url %></p>
-<p>曲名:<%= @score.title %></p>
-<p>グレード:<%= @score.grade %></p>
-<p>開始日:<%= @score.start_date %></p>
-<p>完了日:<%= @score.completion_date %></p>
-<%= link_to "編集", edit_score_path(@score), data: { turbolinks: false} %>
-<%= link_to "削除", @score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } %>
-<h4>練習ログ</h4>
-<% @logs  = @score.feed_log(@score.id) %>
-<% @logs.each do |log| %>
- <p><%= log.content %><%= log.start_time %></p>
- <%= link_to "削除", log_path(log), method: :delete, data: { confirm: "ログを削除してもよろしいですか?" } %>
-<% end %>
+<div class="content">
+  <section class="show-area">
+    <div class="show-image">
+      <%= image_tag @score.icon.thumb.url %>
+    </div>
+    <div class="show-score">
+      <p class="score-title"><%= @score.title %></p>
+      <div class="title">
+        <p>グレード</p>
+        <%= @score.grade %>
+      </div>
+      <div class="title">
+        <p>開始日</p>
+        <%= @score.start_date %>
+      </div>
+      <div class="title">
+        <p>完了日</p>
+        <%= @score.completion_date %>
+      </div>
+      <div class="title">
+        <p>ポイント</p>
+      </div>
+      <div class="edit">
+        <%= link_to edit_score_path(@score), data: { turbolinks: false} do %>
+          <i class="far fa-lg fa-edit fa-fw faa-pulse animated-hover"></i>
+        <% end %>
+        <%= link_to @score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } do %>
+          <i class="far fa-lg fa-trash-alt fa-fw faa-wrench animated-hover"></i>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <section class="log-area">
+    <h4>練習記録</h4>
+    <li>
+      <div class="row">
+        <% @logs  = @score.feed_log(@score.id) %>
+        <% @logs.each do |log| %>
+          <div class="col-md-2">
+            <p><%= log.start_time %></p>
+          </div>
+          <div class="col-md-8">
+            <p><%= log.content %></p>
+          </div>
+          <div class="col-md-2">
+            <%= link_to log_path(log), method: :delete, data: { confirm: "練習記録を削除してもよろしいですか?" } do %>
+              <div class="float-right"><i class="fas fa-times"></i></div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </li>
 
-<%= form_with model: @log, local: true do |f| %>
-  <%= hidden_field_tag :score_id, @score.id %>
-  <%= f.text_area :content, placeholder: "練習記録" %>
-  <%= f.text_field :start_time, class: 'date', placeholder: "日付を選択" %>
-  <%= f.submit "ログ追加" %>
-<% end %>
+    <div class="form-area">
+      <%= form_with model: @log, local: true do |f| %>
+        <%= hidden_field_tag :score_id, @score.id %>
+        <div>
+        <%= f.text_area :content, placeholder: "練習記録", class: "text-box" %>
+        </div>
+        <div>
+        <%= f.text_field :start_time, class: 'date', placeholder: "日付を選択", class: "time-box" %>
+        <%= f.submit "記録する", class: "record-btn" %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>
