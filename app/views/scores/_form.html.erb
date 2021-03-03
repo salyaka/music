@@ -1,39 +1,45 @@
 <div class="content">
-  <div class="record-area">
-    <%= form_with model: @score, local: true do |f| %>
-      <table>
-        <tbody>
-          <tr>
-          <th><%= f.label :title, "曲名" %></th>
-          <td><%= f.text_field :title, class: "box" %></td>
-          </tr>
-          <tr>
-          <th><%= f.label :status, "状況" %></th>
-          <td><%= f.select :status, Score.statuses.keys.map {|k| [I18n.t("enums.score.status.#{k}"), k]}, class: "status" %></td>
-          </tr>
-          <tr>
-          <th><%= f.label :grade, "グレード" %></th>
-          <td><%= f.text_field :grade, class: "box" %></td>
-          </tr>
-          <tr>
-          <th><%= f.label :start_date, "開始日" %></th>
-          <td><%= f.text_field :start_date, class: 'date', placeholder: "日付を選択" %></td>
-          </tr>
-          <tr>
-          <th><%= f.label :completion_date, "完成日" %></th>
-          <td><%= f.text_field :completion_date, class: 'date', placeholder: "日付を選択" %></td>
-          </tr>
-          <tr>
-          <th><%= f.label :point, "ポイント" %></th>
-          <td><%= f.text_area :point, class: "point" %></td>
-          </tr>
-          <tr>
-          <th><%= f.label :icon, "画像" %></th>
-          <td><%= f.file_field :icon, accept: "image/png,image/jpeg,image/jpg" %></td>
-          </tr>
-        </tbody>
-      </table>
-      <%= f.submit "登録", class: "record-btn", id: "new-btn" %>
-    <% end %>
+  <div class="form">
+    <div class="record-area">
+      <%= form_with model: @score, local: true do |f| %>
+        <table>
+          <tbody>
+            <tr>
+            <th><%= f.label :title, "曲名" %></th>
+            <td><%= f.text_field :title, class: "box" %></td>
+            </tr>
+            <tr>
+            <th><%= f.label :status, "状況" %></th>
+            <td><%= f.select :status, Score.statuses.keys.map {|k| [I18n.t("enums.score.status.#{k}"), k]}, class: "status" %></td>
+            </tr>
+            <tr>
+            <th><%= f.label :grade, "グレード" %></th>
+            <td><%= f.text_field :grade, class: "box" %></td>
+            </tr>
+            <tr>
+            <th><%= f.label :start_date, "開始日" %></th>
+            <td><%= f.text_field :start_date, class: 'date', placeholder: "日付を選択" %></td>
+            </tr>
+            <tr>
+            <th><%= f.label :completion_date, "完成日" %></th>
+            <td><%= f.text_field :completion_date, class: 'date', placeholder: "日付を選択" %></td>
+            </tr>
+            <tr>
+            <th><%= f.label :point, "ポイント" %></th>
+            <td><%= f.text_area :point, class: "point" %></td>
+            </tr>
+            <tr>
+            <th><%= f.label :icon, "画像" %></th>
+            <td><%= f.file_field :icon, accept: "image/png,image/jpeg,image/jpg" %></td>
+            </tr>
+          </tbody>
+        </table>
+        <p><%= f.check_box :remove_icon %>画像を削除する</p>
+        <%= f.submit "登録", class: "record-btn", id: "new-btn" %>
+      <% end %>
+    </div>
+    <div class="upload-image">
+      <%= image_tag @score.icon.thumb.url if @score.icon? %>
+    </div>
   </div>
 </div>

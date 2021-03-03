@@ -46,7 +46,7 @@ class ScoresController < ApplicationController
   private
 
   def score_params
-    params.require(:score).permit(:title, :grade, :start_date, :completion_date, :icon, :status, :point)
+    params.require(:score).permit(:title, :grade, :start_date, :completion_date, :icon, :status, :point, :remove_icon)
   end
 
   def set_score
