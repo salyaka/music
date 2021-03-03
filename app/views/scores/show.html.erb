@@ -60,11 +60,11 @@
       <%= form_with model: @log, local: true do |f| %>
         <%= hidden_field_tag :score_id, @score.id %>
         <div>
-        <%= f.text_area :content, placeholder: "練習記録", class: "text-box" %>
+          <%= f.text_area :content, placeholder: "練習記録", class: "text-box" %>
         </div>
         <div>
-        <%= f.text_field :start_time, class: 'date', placeholder: "日付を選択", class: "time-box" %>
-        <%= f.submit "記録する", class: "record-btn" %>
+          <%= f.text_field :start_time, class: 'date', placeholder: "日付を選択", class: "time-box" %>
+          <%= f.submit "記録する", class: "record-btn" %>
         </div>
       <% end %>
     </div>
