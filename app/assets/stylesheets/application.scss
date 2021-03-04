@@ -251,10 +251,22 @@ input[name="tab-item"] {
   width: 70%;
 }
 
-/* 楽譜登録・編集画面 */
+/* 楽譜登録・編集画面
+--------------------------*/
+.form {
+  margin: 50px;
+  display: flex;
+}
 .record-area {
   margin: 50px;
-  padding: 50px;
+  padding: 20px;
+  P {
+    padding-left: 100px;
+  }
+}
+.upload-image {
+  margin: 50px;
+  padding: 20px;
 }
 .box,
 .status,
