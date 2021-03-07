@@ -26,7 +26,7 @@
         <%= @score.point %>
       </div>
       <div class="edit">
-        <%= link_to edit_score_path(@score), data: { turbolinks: false} do %>
+        <%= link_to edit_score_path(@score) do %>
           <i class="far fa-lg fa-edit fa-fw faa-pulse animated-hover"></i>
         <% end %>
         <%= link_to @score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } do %>
@@ -63,7 +63,7 @@
           <%= f.text_area :content, placeholder: "練習記録", class: "text-box" %>
         </div>
         <div>
-          <%= f.text_field :start_time, class: 'date', placeholder: "日付を選択", class: "time-box" %>
+          <%= f.text_field :start_time, placeholder: "日付を選択", class: 'flatpickr' %>
           <%= f.submit "記録する", class: "record-btn" %>
         </div>
       <% end %>
