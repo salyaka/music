@@ -17,10 +17,10 @@ class ScoresController < ApplicationController
   def create
     @score = current_user.score.create(score_params)
     if @score.save
-      flash[:success] = "楽譜を登録しました"
+      flash[:info] = "楽譜を登録しました"
       redirect_to :scores
     else
-      flash[:danger] = "楽譜を登録できません"
+      flash.now[:danger] = "楽譜を登録できません"
       render action: :new
     end
   end
@@ -30,7 +30,7 @@ class ScoresController < ApplicationController
 
   def update
     if @score.update_attributes(score_params)
-      flash[:success] = "楽譜の情報が編集されました"
+      flash[:info] = "楽譜の情報が編集されました"
       redirect_to :scores
     else
       render action: :edit
@@ -39,7 +39,7 @@ class ScoresController < ApplicationController
 
   def destroy
     @score.destroy!
-    flash[:success] = "楽譜を削除しました"
+    flash[:info] = "楽譜を削除しました"
     redirect_to :scores
   end
 
