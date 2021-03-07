@@ -67,6 +67,13 @@ img {
   }
 }
 
+/* フラッシュメッセージ */
+.alert-info {
+  @extend .alert-success;
+}
+.alert-alert {
+  @extend .alert-danger;
+}
 
 /* HEADER
 --------------------------*/
