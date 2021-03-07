@@ -16,6 +16,7 @@
 */
 
 @import "bootstrap/scss/bootstrap";
+@import "flatpickr/dist/flatpickr.css";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "simple_calendar";
 
@@ -247,7 +248,7 @@ input[name="tab-item"] {
 .text-box {
   width: 90%;
 }
-.time-box {
+.flatpickr {
   width: 70%;
 }
 

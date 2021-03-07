@@ -7,6 +7,20 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("flatpickr")
+import flatpickr from "flatpickr";
+document.addEventListener("turbolinks:load", () => {
+  const TODAY = new Date(new Date().setHours(0, 0, 0, 0))
+
+  flatpickr("[class='flatpickr']", {
+    // スマートフォンでもカレンダーに「flatpickr」を使用
+    disableMobile: true,
+    // 今日までを選択可能
+    maxDate: TODAY
+  })
+})
+// stylesheets
+require("../stylesheets/application.scss")
 
 import "bootstrap/dist/js/bootstrap"
 import '@fortawesome/fontawesome-free/js/all';

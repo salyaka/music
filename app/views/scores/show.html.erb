@@ -63,7 +63,7 @@
           <%= f.text_area :content, placeholder: "練習記録", class: "text-box" %>
         </div>
         <div>
-          <%= f.text_field :start_time, class: 'date', placeholder: "日付を選択", class: "time-box" %>
+          <%= f.text_field :start_time, placeholder: "日付を選択", class: 'flatpickr' %>
           <%= f.submit "記録する", class: "record-btn" %>
         </div>
       <% end %>
