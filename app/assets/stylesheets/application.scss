@@ -42,6 +42,7 @@ img {
   margin: 0 auto;
 } 
 .content {
+  margin: 80px;
   background: #F8F9FA;
   border-top-left-radius:10px; 
   border-top-right-radius:10px;
@@ -208,12 +209,14 @@ input[name="tab-item"] {
 --------------------------*/
 .show-area {
   display: flex;
-  margin: 50px 100px;
-  padding: 50px 60px;
+  padding: 70px 100px;
   border-bottom: 3px solid #e8e8e8;
 }
+.show-image {
+  padding: 0px 40px;
+}
 .show-score {
-  margin: 10px 70px;
+  padding: 10px 70px;
 }
 .score-title {
   font-size: 40px;
@@ -238,8 +241,7 @@ input[name="tab-item"] {
 }
 .log-area {
   list-style: none;
-  margin: 50px 100px;
-  padding: 20px 60px;
+  padding: 70px 100px;
   li {
     font-size: 16px;
     padding: 10px 0;
@@ -294,4 +296,52 @@ table td {
   width: 100%;
   max-width: 340px;
   margin-top: 20px;
+}
+
+
+/* カレンダー
+--------------------------*/
+.calendar-heading {
+  font-size: 40px;
+  padding: 2rem 0 ;
+}
+.last-month-text,
+.next-month-text {
+  margin: 0 5%;
+  font-size: 30px;
+  color: #565656;
+  text-decoration:none !important;
+  background-color: transparent;
+}
+.simple-calendar {
+  .wday-0 {
+    background-color: #fff;
+  }
+  .wday-1 {
+    background-color: #fff;
+  }
+  .wday-2 {
+    background-color: #fff;
+  }
+  .wday-3 {
+    background-color: #fff;
+  }
+  .wday-4 {
+    background-color: #fff;
+  }
+  .wday-5 {
+    background-color: #fff;
+  }
+  .wday-6 {
+    background-color: #fff;
+  }
+  .prev-month {
+    background-color: #e9e9e9;
+  }
+  .next-month {
+    background-color: #e9e9e9;
+  }
+  table th {
+    background-color: #7EACC4;
+  }
 }

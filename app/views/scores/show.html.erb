@@ -39,7 +39,7 @@
     <h4>練習記録</h4>
     <li>
       <div class="row">
-        <% @logs  = @score.feed_log(@score.id) %>
+        <% @logs  = @score.feed_log(@score.id).order("start_time DESC") %>
         <% @logs.each do |log| %>
           <div class="col-md-2">
             <p><%= log.start_time %></p>
