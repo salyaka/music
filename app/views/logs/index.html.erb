@@ -2,7 +2,9 @@
   <%= month_calendar events: @logs do |date, logs| %>
     <%= date.day %>
     <% logs.each do |log| %>
-      <p><%= log.score.title %></p>
+      <% if current_user.id == log.score.user_id %>
+        <p><%= log.score.title %></p>
+      <% end %>
     <% end %>
   <% end %> 
 </div>
