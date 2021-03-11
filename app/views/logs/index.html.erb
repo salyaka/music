@@ -1,6 +1,8 @@
-<%= month_calendar events: @logs do |date, logs| %>
-  <%= date.day %>
-  <% logs.each do |log| %>
-    <p><%= log.score.title %></p>
-  <% end %>
-<% end %> 
+<div class="calendar">
+  <%= month_calendar events: @logs do |date, logs| %>
+    <%= date.day %>
+    <% logs.each do |log| %>
+      <p><%= log.score.title %></p>
+    <% end %>
+  <% end %> 
+</div>
