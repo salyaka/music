@@ -1,0 +1,15 @@
+.navbar {
+  padding-left: 30px;
+}
+nav ul li {
+  margin-right: 0.9rem;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:active {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}

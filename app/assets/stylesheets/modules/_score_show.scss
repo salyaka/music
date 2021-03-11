@@ -1,0 +1,56 @@
+.show-area {
+  display: flex;
+  padding: 70px 100px;
+  border-bottom: 3px solid #e8e8e8;
+}
+.show-image {
+  padding: 0px 40px;
+}
+.show-score {
+  padding: 10px 70px;
+}
+.score-title {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.title {
+  display: flex;
+  height: 30px;
+  p {
+    width: 90px;
+    font-weight: 600;
+  }
+}
+.edit {
+  margin-top: 15px;
+}
+.fa-edit {
+  color: #7EACC4;
+}
+.fa-trash-alt {
+  color: #da4242;
+}
+.log-area {
+  list-style: none;
+  padding: 70px 100px;
+  li {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
+#log-btn {
+  max-width: 130px;
+}
+.fa-times {
+  text-decoration:none !important;
+  color: #da4242;
+}
+.form-area {
+  padding-left: 17%;
+}
+.text-box {
+  width: 90%;
+}
+.flatpickr {
+  width: 70%;
+}

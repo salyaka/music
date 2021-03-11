@@ -1,0 +1,55 @@
+.devise_content {
+  background: #F8F9FA;
+  border-top-left-radius:10px; 
+  border-top-right-radius:10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 480px;
+  margin: 80px auto;
+  padding: 2rem;
+}
+.msg {
+  padding-top: 30px;
+}
+.field {
+  width: 100%;
+}
+.label-field {
+  padding-top: 20px;
+}
+.devise-btn {
+  display: inline-block;
+  padding: 0.1em 1em;
+  width: 100%;
+  text-decoration:none !important;
+  color: white;
+  background: #F5B629;
+  border: solid 2px #F5B629;
+  border-radius: 8px;
+  transition: .4s;
+  &:hover {
+    background: white;
+    color: #F5B629;
+  }
+}
+
+/* link */
+.info-btn {
+  display: inline-block;
+  padding: 0.1em 1em;
+  margin: 0 auto;
+  background: white;
+  color: #7EACC4;
+  border: solid 2px #7EACC4;
+  border-radius: 8px;
+  transition: .4s;
+  width: 100%;
+  text-decoration:none !important;
+  text-align: center;
+  &:hover {
+    background: #7EACC4;
+    color: white;
+  }
+}
