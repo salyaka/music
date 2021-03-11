@@ -1,0 +1,33 @@
+.form {
+  margin: 50px;
+  display: flex;
+}
+.record-area {
+  margin: 50px;
+  padding: 20px;
+  P {
+    padding-left: 100px;
+  }
+}
+.upload-image {
+  margin: 50px;
+  padding: 20px;
+}
+.box,
+.status,
+.date,
+.point {
+  width: 100%;
+  max-width: 240px;
+}
+table th {
+  padding-bottom: 10px;
+}
+table td {
+  padding-left: 10%;
+  padding-bottom: 10px;
+}
+#new-btn {
+  max-width: 340px;
+  margin-top: 20px;
+}

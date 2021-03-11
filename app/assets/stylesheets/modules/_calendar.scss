@@ -1,0 +1,44 @@
+.calendar-heading {
+  font-size: 40px;
+  padding: 2rem 0 ;
+}
+.last-month-text,
+.next-month-text {
+  margin: 0 5%;
+  font-size: 30px;
+  color: #565656;
+  text-decoration:none !important;
+  background-color: transparent;
+}
+.simple-calendar {
+  .wday-0 {
+    background-color: #fff;
+  }
+  .wday-1 {
+    background-color: #fff;
+  }
+  .wday-2 {
+    background-color: #fff;
+  }
+  .wday-3 {
+    background-color: #fff;
+  }
+  .wday-4 {
+    background-color: #fff;
+  }
+  .wday-5 {
+    background-color: #fff;
+  }
+  .wday-6 {
+    background-color: #fff;
+  }
+  .prev-month {
+    background-color: #e9e9e9;
+  }
+  .next-month {
+    background-color: #e9e9e9;
+  }
+  table th {
+    background-color: #7EACC4;
+  }
+}
