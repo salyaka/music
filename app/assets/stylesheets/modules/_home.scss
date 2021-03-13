@@ -1,0 +1,38 @@
+.top-page {
+  margin-top: 5%;
+  text-align: center;
+}
+.description {
+  margin-top: 30px;
+}
+.illustration {
+  display: flex;
+}
+.illustration-item {
+  margin: 20px;
+  p {
+    padding: 10px;
+  }
+}
+.under {
+  background: linear-gradient(transparent 70%, rgb(245, 245, 102) 70%);
+}
+.signup {
+  margin-bottom: 30px;
+}
+.signup-btn {
+  display: inline-block;
+  padding: 0.1em 1em;
+  width: 100%;
+  max-width: 300px;
+  text-decoration:none !important;
+  color: #E8EBE4;
+  background: #71A1C0;
+  border: solid 2px #71A1C0;
+  border-radius: 8px;
+  transition: .4s;
+  &:hover {
+    background: #E8EBE4;
+    color: #71A1C0;
+  }
+}
