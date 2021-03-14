@@ -7,6 +7,7 @@
 }
 .illustration {
   display: flex;
+  justify-content: space-between;
 }
 .illustration-item {
   margin: 20px;
@@ -35,5 +36,22 @@
   &:hover {
     background: #E8EBE4;
     color: #71A1C0;
+  }
+}
+
+@media only screen and (min-width:660px) and ( max-width:895px) {
+  .illustration {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .description {
+    margin: 30px;
+    text-align: left;
+  }
+  .illustration {
+    flex-direction: column;
   }
 }
