@@ -13,7 +13,7 @@
               <td><%= f.select :status, Score.statuses.keys.map {|k| [I18n.t("enums.score.status.#{k}"), k]}, class: "status" %></td>
             </tr>
             <tr>
-              <th><%= f.label :grade, "グレード" %></th>
+              <th><%= f.label :grade, "難易度" %></th>
               <td><%= f.text_field :grade, class: "box" %></td>
             </tr>
             <tr>
