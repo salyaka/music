@@ -85,10 +85,10 @@ input[name="tab-item"] {
 }
 .scores {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 .score {
-  margin: 10px 20px;
+  margin: 10px auto;
   padding: 10px;
   text-decoration:none !important;
   transition: .3s;
@@ -103,4 +103,22 @@ input[name="tab-item"] {
 .image {
   width: 170px;
   height: 220px;
+}
+
+@media only screen and (min-width:660px) and ( max-width:895px) {
+  .count-box {
+    margin: 8% 0%;
+    padding: 40px;
+  }
+
+}
+
+@media only screen and (max-width: 660px) {
+  .count-box {
+    margin: 8% 0%;
+    padding: 5%;
+  }
+  .scores {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
