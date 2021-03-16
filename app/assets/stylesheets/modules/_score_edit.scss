@@ -35,10 +35,11 @@ table td {
     margin-top: 10px;
     padding-right: 30px;
   }
-  table {
+  table.create-form {
     width: 100%;
   }
-  th, td {
+  th.create-form,
+  td.create-form {
     display: block;
     text-align: left;
     width: 100%;
@@ -61,10 +62,11 @@ table td {
 }
 
 @media only screen and (max-width: 660px) {
-  table {
+  table.create-form {
     width: 100%;
   }
-  th, td {
+  th.create-form, 
+  td.create-form {
     display: block;
     text-align: left;
     width: 100%;
