@@ -48,3 +48,23 @@
     background-color: #7EACC4;
   }
 }
+
+@media only screen and (min-width:660px) and ( max-width:1200px) {
+  .calendar {
+    padding: 0px;
+    line-height: 1.1 !important;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .calendar-heading {
+    font-size: 30px;
+  }
+  .calendar {
+    line-height: 1.1 !important;
+    padding: 0px;
+  }
+  .simple-calendar td {
+    font-size: 5px;
+  }
+}

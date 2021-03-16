@@ -2,35 +2,35 @@
   <div class="form">
     <div class="record-area">
       <%= form_with model: @score, local: true do |f| %>
-        <table>
+        <table class="create-form">
           <tbody>
             <tr>
-              <th><%= f.label :title, "曲名" %></th>
-              <td><%= f.text_field :title, class: "box", required: true %></td>
+              <th class="create-form"><%= f.label :title, "曲名" %></th>
+              <td class="create-form"><%= f.text_field :title, class: "box", required: true %></td>
             </tr>
             <tr>
-              <th><%= f.label :status, "状況" %></th>
-              <td><%= f.select :status, Score.statuses.keys.map {|k| [I18n.t("enums.score.status.#{k}"), k]}, class: "status" %></td>
+              <th class="create-form"><%= f.label :status, "状況" %></th>
+              <td class="create-form"><%= f.select :status, Score.statuses.keys.map {|k| [I18n.t("enums.score.status.#{k}"), k]}, class: "status" %></td>
             </tr>
             <tr>
-              <th><%= f.label :grade, "難易度" %></th>
-              <td><%= f.text_field :grade, class: "box" %></td>
+              <th class="create-form"><%= f.label :grade, "難易度" %></th>
+              <td class="create-form"><%= f.text_field :grade, class: "box" %></td>
             </tr>
             <tr>
-              <th><%= f.label :start_date, "開始日" %></th>
-              <td><%= f.text_field :start_date, class: 'flatpickr', placeholder: "日付を選択" %></td>
+              <th class="create-form"><%= f.label :start_date, "開始日" %></th>
+              <td class="create-form"><%= f.text_field :start_date, class: 'flatpickr', placeholder: "日付を選択" %></td>
             </tr>
             <tr>
-              <th><%= f.label :completion_date, "完成日" %></th>
-              <td><%= f.text_field :completion_date, class: 'flatpickr', placeholder: "日付を選択" %></td>
+              <th class="create-form"><%= f.label :completion_date, "完成日" %></th>
+              <td class="create-form"><%= f.text_field :completion_date, class: 'flatpickr', placeholder: "日付を選択" %></td>
             </tr>
             <tr>
-              <th><%= f.label :point, "ポイント" %></th>
-              <td><%= f.text_area :point, class: "point" %></td>
+              <th class="create-form"><%= f.label :point, "メモ" %></th>
+              <td class="create-form"><%= f.text_area :point, class: "point" %></td>
             </tr>
             <tr>
-              <th><%= f.label :icon, "画像" %></th>
-              <td><%= f.file_field :icon, accept: "image/png,image/jpeg,image/jpg" %></td>
+              <th class="create-form"><%= f.label :icon, "画像" %></th>
+              <td class="create-form"><%= f.file_field :icon, accept: "image/png,image/jpeg,image/jpg" %></td>
             </tr>
           </tbody>
         </table>

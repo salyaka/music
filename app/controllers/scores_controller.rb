@@ -31,7 +31,7 @@ class ScoresController < ApplicationController
   def update
     if @score.update_attributes(score_params)
       flash[:info] = "楽譜の情報が編集されました"
-      redirect_to :scores
+      redirect_to :score
     else
       render action: :edit
     end
