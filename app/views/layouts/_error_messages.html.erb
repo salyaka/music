@@ -1,0 +1,9 @@
+<% if @score.errors.any? %>
+  <div class="error_messages">
+    <ul>
+      <% @score.errors.full_messages.each do |msg| %>
+        <li><span style="color: red;"><%= msg %></span></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
