@@ -1,6 +1,12 @@
 ---
 ja:
   activerecord:
+    models:
+      score: 楽譜
+    attributes:
+      score:
+        title: タイトル
+        point: メモ
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
