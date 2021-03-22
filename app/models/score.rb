@@ -2,6 +2,7 @@ class Score < ApplicationRecord
   belongs_to :user
   has_many :logs, dependent: :destroy
   validates :title, presence: true, length: { in: 1..50 }
+  validates :point, allow_blank: true, length: { maximum: 100 }
   mount_uploader :icon, ImageUploader
 
   enum status: {
