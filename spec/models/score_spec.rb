@@ -20,6 +20,14 @@ RSpec.describe Score, type: :model do
       end
     end
 
+    context "point が101字以上のとき" do
+      let(:score) { build(:score, point: "a" * 101) }
+      it "エラーが発生する" do
+        expect(subject).to eq false
+        expect(score.errors[:point]).to include "は100文字以内で入力してください"
+      end
+    end
+
     context "楽譜が削除されたとき" do
       subject { score.destroy }
       let(:score) { create(:score) }
