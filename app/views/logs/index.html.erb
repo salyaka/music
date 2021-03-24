@@ -3,7 +3,7 @@
     <%= date.day %>
     <% logs.each do |log| %>
       <% if current_user.id == log.score.user_id %>
-        <p><%= log.score.title %></p>
+        <p><span class="under"><%= log.score.title %></span></p>
       <% end %>
     <% end %>
   <% end %> 

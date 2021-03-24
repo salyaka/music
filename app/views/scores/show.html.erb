@@ -5,26 +5,30 @@
     </div>
     <div class="show-score">
       <p class="score-title"><%= @score.title %></p>
-      <div class="title">
-        <p>登録状況</p>
-        <%= @score.status_i18n %>
-      </div>
-      <div class="title">
-        <p>難易度</p>
-        <%= @score.grade %>
-      </div>
-      <div class="title">
-        <p>開始日</p>
-        <%= @score.start_date %>
-      </div>
-      <div class="title">
-        <p>完了日</p>
-        <%= @score.completion_date %>
-      </div>
-      <div class="title">
-        <p>メモ</p>
-        <%= @score.point %>
-      </div>
+      <table class="details">
+        <tbody>
+          <tr>
+            <th class="details">登録状況</th>
+            <td class="details"><%= @score.status_i18n %></td>
+          </tr>
+          <tr>
+            <th class="details">難易度</th>
+            <td class="details"><%= @score.grade %></td>
+          </tr>
+          <tr>
+            <th class="details">開始日</th>
+            <td class="details"><%= @score.start_date %></td>
+          </tr>
+          <tr>
+            <th class="details">完成日</th>
+            <td class="details"><%= @score.completion_date %></td>
+          </tr>
+          <tr>
+            <th class="details">メモ</th>
+            <td class="details"><%= @score.point %></td>
+          </tr>
+        </tbody>
+      </table>
       <div class="edit">
         <%= link_to edit_score_path(@score) do %>
           <i class="far fa-lg fa-edit fa-fw faa-pulse animated-hover"></i>
@@ -41,10 +45,10 @@
       <div class="row">
         <% @logs  = @score.feed_log(@score.id).order("start_time DESC") %>
         <% @logs.each do |log| %>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <p><%= log.start_time %></p>
           </div>
-          <div class="col-11 col-sm-11 col-md-7">
+          <div class="col-10 col-sm-11 col-md-8">
             <p><%= log.content %></p>
           </div>
           <div class="col-1 col-sm-1 col-md-2">
@@ -64,6 +68,8 @@
         </div>
         <div>
           <%= f.text_field :start_time, placeholder: "日付を選択", class: 'flatpickr', required: true %>
+        </div>
+        <div>
           <%= f.submit "記録する", class: "button", id: "log-btn" %>
         </div>
       <% end %>

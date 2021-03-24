@@ -18,19 +18,12 @@
   width: 100%;
   max-width: 340px;
 }
-table th {
-  padding-bottom: 10px;
-  padding-right: 30px;
-}
-table td {
-  padding-bottom: 10px;
-}
 #new-btn {
   max-width: 380px;
   margin-top: 20px;
 }
 
-@media only screen and (min-width:660px) and ( max-width:1200px) {
+@media only screen and (min-width:600px) and ( max-width:1200px) {
   .record-area {
     margin-top: 10px;
     padding-right: 30px;
@@ -61,7 +54,10 @@ table td {
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width:599px) {
+  .form {
+    margin: 10px;
+  }
   table.create-form {
     width: 100%;
   }
@@ -70,7 +66,6 @@ table td {
     display: block;
     text-align: left;
     width: 100%;
-    padding: 0;
   }
   .record-area {
     margin: 50px 0px;
