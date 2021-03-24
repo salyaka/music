@@ -1,5 +1,5 @@
 .top-page {
-  margin-top: 5%;
+  margin-top: 60px;
   text-align: center;
 }
 .description {
@@ -14,9 +14,6 @@
   p {
     padding: 10px;
   }
-}
-.under {
-  background: linear-gradient(transparent 70%, rgb(245, 245, 102) 70%);
 }
 .signup {
   margin-bottom: 30px;
@@ -39,14 +36,14 @@
   }
 }
 
-@media only screen and (min-width:660px) and ( max-width:895px) {
+@media only screen and (min-width:600px) and ( max-width:1200px) {
   .illustration {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width:599px) {
   .description {
     margin: 30px;
     text-align: left;

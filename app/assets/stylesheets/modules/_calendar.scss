@@ -15,7 +15,7 @@
 }
 .simple-calendar {
   .day {
-    height: 120px;
+    height: 130px;
   }
   .wday-0 {
     background-color: #fff;
@@ -49,16 +49,16 @@
   }
 }
 
-@media only screen and (min-width:660px) and ( max-width:1200px) {
+@media only screen and (min-width:600px) and ( max-width:1200px) {
   .calendar {
     padding: 0px;
     line-height: 1.1 !important;
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width:599px) {
   .calendar-heading {
-    font-size: 30px;
+    font-size: 25px;
   }
   .calendar {
     line-height: 1.1 !important;
@@ -66,5 +66,11 @@
   }
   .simple-calendar td {
     font-size: 5px;
+  }
+  .table-striped {
+    font-size: 10px;
+  }
+  .table-striped td {
+    word-break: break-word;
   }
 }
