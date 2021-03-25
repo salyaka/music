@@ -38,6 +38,13 @@ body {
   padding-top: 60px;
   background: #e8ebe5;
   color: #565656;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
 }
 img {
   max-width: 100%;
