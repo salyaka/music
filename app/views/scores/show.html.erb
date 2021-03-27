@@ -45,10 +45,10 @@
       <div class="row">
         <% @logs  = @score.feed_log(@score.id).order("start_time DESC") %>
         <% @logs.each do |log| %>
-          <div class="col-md-2">
+          <div class="col-md-3">
             <p><%= log.start_time %></p>
           </div>
-          <div class="col-10 col-sm-11 col-md-8">
+          <div class="col-10 col-sm-11 col-md-7">
             <p><%= log.content %></p>
           </div>
           <div class="col-1 col-sm-1 col-md-2">
