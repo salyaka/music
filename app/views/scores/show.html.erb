@@ -43,7 +43,6 @@
     <h4>練習記録</h4>
     <li>
       <div class="row">
-        <% @logs  = @score.feed_log(@score.id).order("start_time DESC") %>
         <% @logs.each do |log| %>
           <div class="col-md-4">
             <p class="start_time"><%= log.start_time %></p>
@@ -59,6 +58,9 @@
         <% end %>
       </div>
     </li>
+    <div class="kaminari">
+      <%= paginate @logs, window: 1 %>
+    </div>
 
     <div class="form-area">
       <%= form_with model: @log, local: true do |f| %>

@@ -25,7 +25,7 @@
   margin-top: 15px;
 }
 .fa-edit {
-  color: #7EACC4;
+  color: #565656;
 }
 .fa-trash-alt {
   color: #da4242;
@@ -55,6 +55,16 @@
   margin-bottom: 10px;
   max-width: 810px;
   width: 100%;
+}
+.kaminari {
+  float: right;
+  margin-bottom: 20px;
+}
+.page {
+  color: #565656;
+  &:hover {
+    color: #565656;
+  }
 }
 
 @media only screen and (min-width:600px) and ( max-width:1200px) {
@@ -100,6 +110,9 @@
     p {
       font-size: 12px;
     }
+  }
+  .kaminari {
+    font-size: 14px;
   }
   .start_time {
     margin-bottom: 0px;

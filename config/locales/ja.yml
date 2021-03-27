@@ -218,3 +218,10 @@ ja:
         finished: 完成
         practice: 練習中
         playing: 弾きたい
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "..."
