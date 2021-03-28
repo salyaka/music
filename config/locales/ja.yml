@@ -220,8 +220,8 @@ ja:
         playing: 弾きたい
   views:
     pagination:
-      first: "&laquo; 最初"
-      last: "最後 &raquo;"
-      previous: "&lsaquo;"
-      next: "&rsaquo;"
+      first: "最新"
+      last: "最後"
+      previous: "<"
+      next: ">"
       truncate: "..."
