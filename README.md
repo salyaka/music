@@ -1,24 +1,34 @@
-# README
+# Score Log
+今まで弾いてきた曲や練習中の曲、弾きたい曲を記録するアプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## URL
+https://score-log.herokuapp.com/　<br>
+ゲストログイン機能があります。
 
-Things you may want to cover:
+## コンセプト
+私は以前エレクトーンを習っていたときにレッスンノートを付けていました。<br>
+先生に注意されたことや練習内容を記録し、練習した日にはカレンダーにチェックを入れるシンプルなものです。<br>
+ですが、後から見返したときに自分の成長を実感でき、カレンダーが埋まっていくことがモチベーションにも繋がっていました。<br>
+今でも趣味でエレクトーンを弾いているため、もっと簡単に記録出来たらと考え制作しました。
 
-* Ruby version
+## 開発環境・使用技術
+#### フロントエンド
+* SCSS
+* JavaScript (JQuery)
 
-* System dependencies
+#### バックエンド
+* Ruby 2.7.2
+* Rails 6.0.3.5
 
-* Configuration
+#### DB
+* PostgreSQL 13.1
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 機能一覧
+* ユーザー登録、ログイン機能(devise)
+* ゲストログイン機能
+* 楽譜の登録、編集機能
+* 画像投稿機能(CarrierWave)
+* ログ機能
+* ページネーション機能(kaminari)
+* 楽譜のステータス管理機能(enum)
+* カレンダー機能(flatpickr,simple_calendar)
