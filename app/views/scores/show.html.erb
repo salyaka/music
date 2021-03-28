@@ -41,11 +41,8 @@
   </section>
   <section class="log-area">
     <h4>練習記録</h4>
-    <li id="pagenate">
+    <div id="pagenate">
       <%= render "log" %>
-    </li>
-    <div class="kaminari">
-      <%= paginate @logs, window: 1, remote: true %>
     </div>
 
     <div class="form-area">
