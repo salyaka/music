@@ -30,7 +30,7 @@
         </tbody>
       </table>
       <div class="edit">
-        <%= link_to edit_score_path(@score) do %>
+        <%= link_to edit_score_path(@score), class: 'edit-icon' do %>
           <i class="far fa-lg fa-edit fa-fw faa-pulse animated-hover"></i>
         <% end %>
         <%= link_to @score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } do %>
