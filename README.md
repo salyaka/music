@@ -1,5 +1,6 @@
 # Score Log
-今まで弾いてきた曲や練習中の曲、弾きたい曲を記録するアプリです。
+今までに弾いた曲や練習中の曲、弾きたい曲を記録するアプリです。
+![スクリーンショット 2021-03-28 20 18 38](https://user-images.githubusercontent.com/73941034/112753426-95aebd00-9012-11eb-8d3d-494c7e4c61dc.jpeg)
 
 ## URL
 https://score-log.herokuapp.com/　<br>
