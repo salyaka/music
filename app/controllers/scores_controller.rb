@@ -9,6 +9,10 @@ class ScoresController < ApplicationController
   def show
     @log = Log.new
     @logs  = @score.feed_log(@score.id).page(params[:page]).per(5).order("start_time DESC")
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new
