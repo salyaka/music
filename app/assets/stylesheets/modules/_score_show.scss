@@ -21,11 +21,20 @@
     font-weight: 600;
   }
 }
+table.details {
+  table-layout: fixed;
+}
+th.details{
+  width: 100px;
+}
 .edit {
   margin-top: 15px;
 }
+.edit-icon {
+  text-decoration:none !important;
+}
 .fa-edit {
-  color: #565656;
+  color: #7EACC4;
 }
 .fa-trash-alt {
   color: #da4242;
@@ -85,13 +94,6 @@
     width: 100%;
     max-width: 700px;
   }
-  table.details {
-    width: 100%;
-  }
-  th.details,
-  td.details {
-    width: 10%;
-  }
 }
 
 @media only screen and (max-width:599px) {
@@ -136,9 +138,5 @@
   }
   table.details {
     width: 100%;
-  }
-  th.details,
-  td.details {
-    width: 30%;
   }
 }
