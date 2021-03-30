@@ -31,6 +31,7 @@ gem 'devise'
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 gem 'enum_help'
+gem 'fog-aws'
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem "simple_calendar", "~> 2.4"
