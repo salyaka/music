@@ -1,0 +1,22 @@
+.kaminari {
+  float: right;
+  margin-bottom: 20px;
+}
+.page, 
+.prev, .next,
+.first, .last {
+  padding: 0px 5px;
+  &:hover {
+    background-color: #ddd;
+  }
+}
+a {
+  text-decoration:none !important;
+  color: #565656;
+  &:hover {
+    color: #565656;
+  }
+}
+.current {
+  border-bottom: solid 2px #565656;
+}
