@@ -4,7 +4,6 @@ class ScoresController < ApplicationController
   DISPLAY_COUNT = 5
 
   def index
-    @scores = current_user.score.all.order("created_at DESC")
   end
 
   def show
