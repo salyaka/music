@@ -1,14 +1,14 @@
 class ScoresController < ApplicationController
   before_action :authenticate_user!
   before_action :set_score, only: %w(show edit update destroy)
+  DISPLAY_COUNT = 5
 
   def index
-    @scores = current_user.score.all.order("created_at DESC")
   end
 
   def show
     @log = Log.new
-    @logs  = @score.feed_log(@score.id).page(params[:page]).per(5).order("start_time DESC")
+    @logs  = @score.feed_log(@score.id).page(params[:page]).per(DISPLAY_COUNT).order("start_time DESC")
     respond_to do |format|
       format.html
       format.js

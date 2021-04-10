@@ -1,6 +1,6 @@
 <div class="count-box">
   <dl>
-    <dd><%= @scores.count %></dd>
+    <dd><%= @scores = current_user.score.all.count %></dd>
     <dt>登録数</dt>
   </dl>
   <dl>
@@ -33,44 +33,24 @@
   <div class="tab-content" id="all-content">
     <div class="scores">
       <% @scores = current_user.score.all.order("created_at DESC") %>
-      <% @scores.each do |score| %>
-        <%= link_to score, class: "score" do %>
-          <div class="image"><%= image_tag score.icon.url %></div>
-          <p><%= score.title %></p>
-        <% end %>
-      <% end %>
+      <%= render "score" %>
     </div>
   </div>
   <div class="tab-content" id="finished-content">
     <div class="scores">
       <% @scores = current_user.score.where(status: 1).order("created_at DESC") %>
-      <% @scores.each do |score| %>
-        <%= link_to score, class: "score" do %>
-          <div class="image"><%= image_tag score.icon.url %></div>
-          <p><%= score.title %></p>
-        <% end %>
-      <% end %>
+      <%= render "score" %>
     </div>
   </div>
   <div class="tab-content" id="practice-content">
     <div class="scores">
       <% @scores = current_user.score.where(status: 2).order("created_at DESC") %>
-      <% @scores.each do |score| %>
-        <%= link_to score, class: "score" do %>
-          <div class="image"><%= image_tag score.icon.url %></div>
-          <p><%= score.title %></p>
-        <% end %>
-      <% end %>
+      <%= render "score" %>
     </div>
   </div>
   <div class="tab-content" id="playing-content">
     <div class="scores">
       <% @scores = current_user.score.where(status: 3).order("created_at DESC") %>
-      <% @scores.each do |score| %>
-        <%= link_to score, class: "score" do %>
-          <div class="image"><%= image_tag score.icon.url %></div>
-          <p><%= score.title %></p>
-        <% end %>
-      <% end %>
+      <%= render "score" %>
     </div>
   </div>

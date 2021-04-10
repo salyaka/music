@@ -1,0 +1,6 @@
+<% @scores.each do |score| %>
+  <%= link_to score, class: "score" do %>
+    <div class="image"><%= image_tag score.icon.url %></div>
+    <p><%= score.title %></p>
+  <% end %>
+<% end %>
