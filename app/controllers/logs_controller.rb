@@ -8,8 +8,8 @@ class LogsController < ApplicationController
       flash[:info] = "練習記録を登録しました"
       redirect_to score_path(@score)
     else
-      flash.now[:danger] = "練習記録を登録できません"
-      render template: "scores/show"
+      flash[:danger] = "練習記録を登録できません"
+      redirect_to score_path(@score)
     end
   end
   
