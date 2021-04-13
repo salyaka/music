@@ -36,6 +36,9 @@
         <%= link_to @score, method: :delete, data: { confirm: "楽譜を削除してもよろしいですか?" } do %>
           <i class="far fa-lg fa-trash-alt fa-fw faa-wrench animated-hover"></i>
         <% end %>
+        <%= link_to scores_path do %>
+          <i class="fas fa-log fa-reply fa-fw faa-passing-reverse animated-hover"></i>
+        <% end %>
       </div>
     </div>
   </section>
