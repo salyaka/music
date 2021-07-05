@@ -4,7 +4,7 @@
 ![スクリーンショット 2021-03-28 20 18 38](https://user-images.githubusercontent.com/73941034/112753426-95aebd00-9012-11eb-8d3d-494c7e4c61dc.jpeg)
 
 ## URL
-https://score-log.herokuapp.com/　<br>
+https://score-log.herokuapp.com/ <br>
 ゲストログイン機能がございます。
 
 ## コンセプト
